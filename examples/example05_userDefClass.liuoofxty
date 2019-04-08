@@ -1,0 +1,19 @@
+// User defined class with getters and setters.
+// EXPECT: "567\n567\n42\n42"
+// CROP-HEADER
+
+class Foo {
+  var x;
+  this(xValue) {
+    this.x = xValue;
+  }
+  def getX() {
+    this.x;
+  }
+}
+var foo = new Foo(567);
+println(foo.x);
+println(foo.getX());
+foo.x = 42;
+println(foo.x);
+println(foo.getX());

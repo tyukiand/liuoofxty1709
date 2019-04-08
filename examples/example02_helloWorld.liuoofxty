@@ -1,0 +1,5 @@
+// A HelloWorld program.
+// EXPECT: "hello, world!"
+// CROP-HEADER
+
+println("hello, world!");

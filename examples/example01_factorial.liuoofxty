@@ -1,0 +1,16 @@
+// Basic factorial function and a while loop.
+// 
+// EXPECT: "1\n1\n2\n6\n24\n120\n720\n5040\n40320\n362880\n"
+// CROP-HEADER
+def fact(n) {
+  if (n == 0) {
+    1;
+  } else {
+    n * fact(n - 1);
+  }
+}
+var i = 0;
+while (i < 10) {
+  println(fact(i));
+  i = i + 1;
+}

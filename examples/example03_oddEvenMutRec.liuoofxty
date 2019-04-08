@@ -1,0 +1,31 @@
+// Mutually recursive function definitions, odd-even.
+// EXPECT: "true\nfalse\ntrue\nfalse\ntrue"
+// CROP-HEADER
+
+def odd(n) {
+  if (n == 0) {
+    false;
+  } else {
+    if (n == 1) {
+      true;
+    } else {
+      even(n - 1);
+    }
+  }
+}
+def even(n) {
+  if (n == 0) {
+    true;
+  } else {
+    if (n == 1) {
+      false;
+    } else {
+      odd(n - 1);
+    }
+  }
+}
+var i = 0;
+while (i < 5) {
+  println(even(i));
+  i = i + 1;
+}

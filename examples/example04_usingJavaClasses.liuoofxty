@@ -1,0 +1,18 @@
+// Using Java classes with reflection.
+// EXPECT: "1003\n100"
+// CROP-HEADER
+
+using java.util.ArrayList;
+
+var x = new ArrayList(10);
+x.add(2 + 25);
+x.add(3);
+x.add(5);
+println(x.size() + 1000);
+
+using java.util.HashMap;
+
+var h = new HashMap();
+h.put(24, 42);
+h.put(85, 58);
+println(h.get(20 + 4) + h.get(17 * 5));
